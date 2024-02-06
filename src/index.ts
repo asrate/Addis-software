@@ -9,6 +9,9 @@ mongoose.connect(process.env.MONGO!).then(()=>{
 const app = express();
 app.use(express.json());
 app.use("/api/song", router)
+
+
+
 const port = process.env.PORT || 3000;
 app.get('/', (req: Request, res: Response) => {
     res.send('Hello, TypeScript Express!');
